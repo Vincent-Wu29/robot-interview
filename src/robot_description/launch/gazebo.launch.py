@@ -52,5 +52,27 @@ def generate_launch_description():
                 "-z", "0.0"
             ],
             output="screen"
+        ),
+
+        Node(
+            package="controller_manager",
+            executable="spawner",
+            arguments=[
+                "joint_state_broadcaster",
+                "--controller-manager",
+                "/controller_manager"
+            ],
+            output="screen"
+        ),
+
+        Node(
+            package="controller_manager",
+            executable="spawner",
+            arguments=[
+                "diff_drive_controller",
+                "--controller-manager",
+                "/controller_manager"
+            ],
+            output="screen"
         )
     ])
