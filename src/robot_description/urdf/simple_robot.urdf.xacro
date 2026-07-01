@@ -49,6 +49,7 @@
 
     <xacro:include filename="$(find robot_description)/urdf/camera.xacro"/>
 
+    <xacro:include filename="$(find robot_description)/urdf/gazebo_sensors.xacro"/>
     <link name="left_wheel_link">
         <visual>
             <origin xyz="0 0 0"
